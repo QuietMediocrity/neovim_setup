@@ -1,0 +1,22 @@
+{
+  "languageserver": {
+    "ccls": {
+      "command": "clangd",
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+      "rootPatterns": ["compile_flags.txt", ".ccls", "build/debug/compile_commands.json", "build/compile_commands.json", ".git/", ".hg/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": ".ccls-cache"
+        },
+        "client": {
+          "snippetSupport": true
+        },
+        "compilationDatabaseDirectory": "build/debug",
+        "clang": {
+          "extraArgs": ["-std=c++20"]
+        }
+      }
+    }
+  },
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd"
+}

@@ -1,0 +1,146 @@
+extends c
+
+# General cpp snippets
+
+snippet hdef ".hpp file include guard" b
+#ifndef $1
+#define $1
+
+$2
+
+#endif // $1
+endsnippet
+
+snippet ns "namespace .. (namespace)" b
+namespace $1 {
+
+} // namespace $1
+endsnippet
+
+snippet for "for loop" b
+for ($1 $2; $2 < $3; ++$2) {
+	$4
+}
+endsnippet
+
+snippet cl "class" b
+class $1
+{
+	$2
+};
+endsnippet
+
+snippet fori "for int loop" b
+for (int i = 0; i < $1; ++i) {
+	$2
+}
+endsnippet
+
+snippet fora "for auto loop" b
+for (auto &$1 : $2) {
+	$3
+}
+endsnippet
+
+snippet forca "for const auto loop" b
+for (const auto &$1 : $2) {
+	$3
+}
+endsnippet
+
+snippet forbe "for begin-end loop" b
+for (auto it = $1.begin(); it < $1.end(); it++) {
+	$2
+}
+endsnippet
+
+snippet ivec "#include <vector>" b
+#include <vector>
+endsnippet
+
+snippet iios "#include <iostream>" b
+#include <iostream>
+endsnippet
+
+snippet istr "#include <string>" b
+#include <string>
+endsnippet
+
+snippet imem "#include <memory>" b
+#include <memory>
+endsnippet
+
+snippet clog "console logging like a pleb" b
+std::cout << "$1" << $2 << '\n';
+endsnippet
+
+snippet fund "function declaration" b
+${1:void} ${2:function_name}($3);
+endsnippet
+
+snippet funi "function implementation" b
+${1:void} ${2:function_name}($3)
+{
+	$4
+}
+endsnippet
+
+snippet str "str::string" w
+std::string $1
+endsnippet
+
+snippet vec "std::vector<>" w
+std::vector<$1> $2
+endsnippet
+
+snippet sptr "std::shared_ptr<>" w
+std::shared_ptr<$1> $2
+endsnippet
+
+snippet szt "std::size_t" w
+std::size_t$1
+endsnippet
+
+snippet co "std::cout << " w
+std::cout << $1
+endsnippet
+
+snippet lcph "Leetcode problem header" b
+/*
+ * Problem $1 - $2
+ * Complexity: $3
+ * Tags: $4
+ */
+$5
+endsnippet
+
+# ~ General cpp snippets
+
+# Catch2 SPECIFIC SECTION
+
+snippet lct "Leetcode solution test" b
+#include "includes.hpp"
+#include "fmtwrapper.hpp"
+#include "src/$1.hpp"
+
+TEST_CASE("$2", "[$1]")
+{
+	$3
+}
+endsnippet
+
+# ~ Catch 2 SPECIFI SECION
+
+# Interview problems snippets
+
+snippet matrix5 "5x5 matrix for the comment section" b
+/*
+ *  $1 $1 $1 $1 $1
+ *  $1 $1 $1 $1 $1
+ *  $1 $1 $1 $1 $1
+ *  $1 $1 $1 $1 $1
+ *  $1 $1 $1 $1 $1
+ */
+endsnippet
+
+# ~ Interview problem snippets
