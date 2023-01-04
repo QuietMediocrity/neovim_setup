@@ -1,9 +1,13 @@
-function make_things_colorful(color)
-	color = color or "rose-pine"
-	vim.cmd.colorscheme(color)
+require("github-theme").setup({
+	theme_style = "dark",
+	colors = {
+		syntax = {
+			keyword = "#46ad6c"
+		}
+	},
+})
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
-make_things_colorful()
+vim.api.nvim_command("hi statusline guibg=#24292e guifg=#bdbdbd")
