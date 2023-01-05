@@ -2,8 +2,9 @@ require("github-theme").setup({
 	theme_style = "dark",
 	colors = {
 		syntax = {
-			keyword = "#46ad6c"
-		}
+			keyword = "#44a167",
+                        func = "#e1e4e8",
+		},
 	},
 })
 

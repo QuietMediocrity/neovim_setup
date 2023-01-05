@@ -20,8 +20,8 @@ return require("packer").startup(function(use)
         use("numToStr/Comment.nvim")
 	use({
 		"VonHeikemen/lsp-zero.nvim",
-		requires = {
-			-- LSP Support
+                requires = {
+                        -- LSP Support
 			{"neovim/nvim-lspconfig"},
 			{"williamboman/mason.nvim"},
 			{"williamboman/mason-lspconfig.nvim"},
