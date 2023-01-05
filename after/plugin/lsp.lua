@@ -33,6 +33,7 @@ lsp.setup_nvim_cmp({
 })
 
 local lspkind = require('lspkind')
+local luasnip = require('luasnip')
 
 lsp.on_attach(function(client, bufnr)
         cmp.setup({
@@ -52,7 +53,36 @@ lsp.on_attach(function(client, bufnr)
                                 ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
                                 with_text = true,
                         })
-                })
+                }),
+                mapping = ({
+                        ["<Tab>"] = cmp.mapping(function(fallback)
+                                if cmp.visible() then
+                                        cmp.select_next_item()
+                                elseif luasnip.expand_or_jumpable() then
+                                        luasnip.expand_or_jump()
+                                else
+                                        fallback()
+                                end
+                        end, { "i", "s" }),
+
+                        ["<S-Tab>"] = cmp.mapping(function(fallback)
+                                if cmp.visible() then
+                                        cmp.select_prev_item()
+                                elseif luasnip.jumpable(-1) then
+                                        luasnip.jump(-1)
+                                else
+                                        fallback()
+                                end
+                        end, { "i", "s" }),
+                }),
+                snippet = {
+                        expand = function(args)
+                                if not luasnip then
+                                        return
+                                end
+                                luasnip.lsp_expand(args.body)
+                        end,
+                },
         })
 
         local opts = { buffer = bufnr, remap = false }
