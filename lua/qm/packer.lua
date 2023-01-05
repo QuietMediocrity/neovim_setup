@@ -41,4 +41,5 @@ return require("packer").startup(function(use)
 	})
 
         use("cdelledonne/vim-cmake")
+        use("rhysd/vim-clang-format")
 end)

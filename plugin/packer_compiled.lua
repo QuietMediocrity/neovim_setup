@@ -174,6 +174,11 @@ _G.packer_plugins = {
     path = "/home/quietmediocrity/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-clang-format"] = {
+    loaded = true,
+    path = "/home/quietmediocrity/.local/share/nvim/site/pack/packer/start/vim-clang-format",
+    url = "https://github.com/rhysd/vim-clang-format"
+  },
   ["vim-cmake"] = {
     loaded = true,
     path = "/home/quietmediocrity/.local/share/nvim/site/pack/packer/start/vim-cmake",
