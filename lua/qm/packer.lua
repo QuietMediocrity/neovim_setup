@@ -28,6 +28,7 @@ return require("packer").startup(function(use)
 
 			-- Autocompletion
 			{"hrsh7th/nvim-cmp"},
+                        {"onsails/lspkind.nvim"},
 			{"hrsh7th/cmp-buffer"},
 			{"hrsh7th/cmp-path"},
 			{"saadparwaiz1/cmp_luasnip"},
