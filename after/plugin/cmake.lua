@@ -11,10 +11,10 @@ vim.keymap.set("n", "<leader>cmn", ":CMakeClean<cr>", { desc = "[cm]ake clea[n]"
 vim.keymap.set("n", "<leader>mb", ":make<cr>", { desc = "[m]ake [b]uild" })
 vim.keymap.set("n", "<leader>mo", ":make<cr>", { desc = "[m]ake [o]pen output" })
 vim.keymap.set("n", "<leader>mc", ":make<cr>", { desc = "[m]ake [c]lose output" })
+vim.keymap.set("n", "<leader>md", ":!./output/debug<cr>", { desc = "[m]ake [r]un the debug executable" })
 
 vim.keymap.set("n", "<leader>cf", ":ClangFormat<cr>", { desc = "[C]lang [F]ormat" })
 
--- qm_todo: I am not sure those commands work...
 local cmake_group = vim.api.nvim_create_augroup("nvim_cmake", { clear = true })
 
 vim.api.nvim_create_autocmd("User", {
