@@ -41,3 +41,6 @@ vim.keymap.set("n", "<leader>bp", ":bprevious<cr>", { desc = "[p]revious [b]uffe
 vim.keymap.set("n", "<leader>bd", ":bdelete<cr>", { desc = "[d]elete [b]uffer" })
 vim.keymap.set("n", "<leader>ba", ":badd", { desc = "[a]dd [b]uffer" })
 vim.keymap.set("n", "<leader>bb", ":%bd<cr>", { desc = "Close all buffers" })
+
+vim.keymap.set("n", "<leader>se", ":setlocal spell spelllang=en_us<cr>", { desc = "[s]pelling: [e]nable" })
+vim.keymap.set("n", "<leader>sd", ":setlocal nospell<cr>", { desc = "[s]pelling: [d]isable" })

@@ -1,11 +1,13 @@
 require("github-theme").setup({
-	theme_style = "dark",
+        comment_style = "NONE",
 	colors = {
 		syntax = {
 			keyword = "#44a167",
                         func = "#e1e4e8",
 		},
 	},
+        keyword_style = "bold",
+	theme_style = "dark",
 })
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

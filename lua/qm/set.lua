@@ -32,3 +32,8 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 150
 
+vim.opt.wmnu = true
+vim.opt.path:append("**")
+
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
