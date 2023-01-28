@@ -27,7 +27,7 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 6
 -- qm_todo: not sure what these two do.
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "no"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 150
