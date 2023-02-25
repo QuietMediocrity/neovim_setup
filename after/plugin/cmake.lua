@@ -3,15 +3,12 @@ vim.g.cmake_console_size = 20
 
 vim.keymap.set("n", "<leader>cmg", ":CMakeGenerate<cr>", { desc = "[cm]ake [g]enerate" })
 vim.keymap.set("n", "<leader>cmb", ":CMakeBuild<cr>", { desc = "[cm]ake [b]uild" })
-vim.keymap.set("n", "<leader>cmt", ":CMakeBuild --target ", { desc = "[cm]ake build [t]arget" })
+vim.keymap.set("n", "<leader>cmt", ":CMakeBuild ", { desc = "[cm]ake build [t]arget" })
 vim.keymap.set("n", "<leader>cmo", ":CMakeOpen<cr>", { desc = "[cm]ake [o]pen build console" })
 vim.keymap.set("n", "<leader>cmc", ":CMakeClose<cr>", { desc = "[cm]ake [c]lose build console" })
 vim.keymap.set("n", "<leader>cmn", ":CMakeClean<cr>", { desc = "[cm]ake clea[n]" })
 
 vim.keymap.set("n", "<leader>mb", ":make<cr>", { desc = "[m]ake [b]uild" })
-vim.keymap.set("n", "<leader>mo", ":make<cr>", { desc = "[m]ake [o]pen output" })
-vim.keymap.set("n", "<leader>mc", ":make<cr>", { desc = "[m]ake [c]lose output" })
-vim.keymap.set("n", "<leader>md", ":!./output/debug<cr>", { desc = "[m]ake [r]un the debug executable" })
 
 vim.keymap.set("n", "<leader>sw", ":ClangdSwitchSourceHeader<cr>", { desc = "[s]witch to paired C/C++ file." })
 vim.keymap.set("n", "<leader>cf", ":ClangFormat<cr>", { desc = "[C]lang [F]ormat" })

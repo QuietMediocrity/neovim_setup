@@ -28,8 +28,8 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format file" })
 
 vim.keymap.set("n", "<C-[>", "<cmd>cnext<CR>zz", { desc = "Jump to next error" })
 vim.keymap.set("n", "<C-]>", "<cmd>cprev<CR>zz", { desc = "Jump to previous error" })
-vim.keymap.set("n", "<leader>[", "<cmd>lnext<CR>zz", { desc = "Jump to next error in current buffer" })
-vim.keymap.set("n", "<leader>]", "<cmd>lprev<CR>zz", { desc = "Jump to previous error in current buffer" })
+vim.keymap.set("n", "<leader>]", "<cmd>lnext<CR>zz", { desc = "Jump to next error in current buffer" })
+vim.keymap.set("n", "<leader>[", "<cmd>lprev<CR>zz", { desc = "Jump to previous error in current buffer" })
 
 vim.keymap.set("n", "<C-j>", "m`:silent +g/\\m^\\s*$/d<CR>``:noh<CR>", { desc = "Deletes empty line below the cursor" })
 vim.keymap.set("n", "<C-k>", "m`:silent -g/\\m^\\s*$/d<CR>``:noh<CR>", { desc = "Deletes empty line above the cursor"})
@@ -39,8 +39,9 @@ vim.keymap.set("n", "<A-k>", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", { desc 
 vim.keymap.set("n", "<leader>bn", ":bnext<cr>", { desc = "[n]ext [b]uffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<cr>", { desc = "[p]revious [b]uffer" })
 vim.keymap.set("n", "<leader>bd", ":bdelete<cr>", { desc = "[d]elete [b]uffer" })
+vim.keymap.set("n", "<leader>bf", ":bp|bd #<cr>", { desc = "[d]elete [b]uffer while keeping the split" })
 vim.keymap.set("n", "<leader>ba", ":badd", { desc = "[a]dd [b]uffer" })
-vim.keymap.set("n", "<leader>bb", ":%bd<cr>", { desc = "Close all buffers" })
+vim.keymap.set("n", "<leader>bb", ":bufdo bd<cr>", { desc = "Close all buffers" })
 
 vim.keymap.set("n", "<leader>se", ":setlocal spell spelllang=en_us<cr>", { desc = "[s]pelling: [e]nable" })
 vim.keymap.set("n", "<leader>sd", ":setlocal nospell<cr>", { desc = "[s]pelling: [d]isable" })
